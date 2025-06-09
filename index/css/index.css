@@ -1,0 +1,717 @@
+@charset "utf-8";
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* ===== Base ===== */
+body {
+  font-family: 'Arial', sans-serif;
+  font-size: 16px;
+}
+
+/* ===== Header ===== */
+header {
+  width: 100%;
+  background-color: white;
+  height: 100px;
+  position: relative;
+}
+
+.header-wrap {
+  width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.logo {
+  float: left;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.logo img {
+  height: 90px;
+}
+
+.menu {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  list-style: none;
+  display: flex;
+  gap: 50px;
+  font-size: 20px;
+  box-sizing: border-box;
+}
+
+.menu li a {
+  color: #404040;
+  text-decoration: none;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 4px;
+  transition: color 0.3s;
+  box-sizing: border-box;
+  
+}
+
+.menu li a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background-color: #428EFF;
+  transition: width 0.3s ease;
+}
+
+.menu li a:hover::after {
+  width: 100%;
+}
+
+.menu li a:hover {
+  color: #428EFF;
+}
+
+.icons {
+  float: right;
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  height: 100px;
+  align-items: center;
+  box-sizing: border-box;
+  
+}
+
+.icons p a {
+  text-decoration: none;
+  color: #404040;
+}
+
+.icons li {
+  text-align: center;
+  font-size: 16px;
+}
+
+.icons img {
+  width: 30px;
+  height: 30px;
+  display: block;
+  margin: 0 auto 5px;
+}
+
+.header-wrap::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+/* 메인슬라이드 ///////////////////////////////////// */
+.main-slider {
+  width: 100%;
+  height: 600px;
+  display: flex;
+  overflow: hidden;
+}
+
+.slides {
+  display: flex;
+  height: 100%;
+  width: 100%;
+}
+
+.slide {
+  position: relative;
+  width: 5%;
+  transition: width 0.5s ease;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.slide.active {
+  width: 90%;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.slide-text {
+  position: absolute;
+  bottom: 40px;
+  left: 40px;
+  color: white;
+  z-index: 2;
+  display: none;
+  padding-right: 20px;
+  box-sizing: border-box;
+}
+
+.slide.active .slide-text {
+  display: block;
+}
+
+.slide-text h2 {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.slide-text p {
+  font-size: 18px;
+}
+
+.slide-num {
+  position: absolute;
+  bottom: 50px;
+  right: 20px;
+  color: white;
+  font-size: 18px;
+  transform: rotate(-90deg);
+  transform-origin: bottom right;
+  opacity: 1;
+}
+
+.slide.active .slide-num {
+  display: none;
+}
+
+
+
+
+
+
+/* ===== Exhibition Section ===== */
+.exhibition {
+  width: 1240px;
+  margin: 60px auto;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+.exhibition h2 {
+  font-size: 40px;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.exhibition h2 a {
+  color: #404040;
+  text-decoration: none;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 4px;
+  transition: color 0.3s;
+}
+
+.exhibition h2 a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  width: 0%;
+  background-color: #428EFF;
+  transition: width 0.3s ease;
+}
+
+.exhibition h2 a:hover {
+  color: #428EFF;
+}
+
+.exhibition h2 a:hover::after {
+  width: 100%;
+}
+
+.exhibition-controls {
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.exhibition-tabs {
+  float: left;
+  display: flex;
+  gap: 20px;
+  font-size: 20px;
+}
+
+.exhibition-regions {
+  float: right;
+  display: flex;
+  gap: 30px;
+  font-size: 20px;
+}
+
+.exhibition-tabs span,
+.exhibition-regions span {
+  position: relative;
+  padding-bottom: 4px;
+  color: #999;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.exhibition-tabs span::after,
+.exhibition-regions span::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  width: 0;
+  background-color: #428EFF;
+  transition: width 0.3s ease;
+}
+
+.exhibition-tabs span:hover,
+.exhibition-regions span:hover {
+  color: #428EFF;
+}
+
+.exhibition-tabs span:hover::after,
+.exhibition-regions span:hover::after {
+  width: 100%;
+}
+
+.exhibition-tabs .active,
+.exhibition-regions .active {
+  color: #428EFF;
+  font-weight: bold;
+}
+
+.exhibition-tabs .active::after,
+.exhibition-regions .active::after {
+  width: 100%;
+}
+
+  
+  .exhibition-list {
+    font-size: 0;
+    overflow: hidden;
+    margin-top: 20px;
+  }
+  
+  .exhibition-card {
+    display: inline-block;
+    width: 295px;
+    margin-right: 20px;
+    margin-bottom: 30px;
+    vertical-align: top;
+    box-sizing: border-box;
+  }
+  
+  .exhibition-card:nth-child(4n) {
+    margin-right: 0;
+  }
+  
+  .exhibition-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 10px;
+    border-radius: 4px;
+  }
+  
+  .exhibition-info .location {
+    color: #666;
+    font-size: 16px;
+    margin-bottom: 3px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
+  .exhibition-info .title a {
+    color: #404040;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: all 0.3s;
+  }
+  
+  .exhibition-info .title a:hover {
+    color: #428EFF;
+    text-decoration: underline;
+  }
+  
+  .exhibition-info .date {
+    color: #777;
+    font-size: 16px;
+    margin-top: 4px;
+    white-space: nowrap;
+  }
+
+/* ===== Program Section ===== */
+.program-section {
+  width: 1240px;
+  margin: 80px auto;
+  overflow: hidden;
+  font-family: 'Noto Sans KR', sans-serif;
+  box-sizing: border-box;
+}
+
+.program-box {
+  float: left;
+  width: 610px;
+  margin-right: 20px;
+  position: relative;
+}
+
+.program-box:last-child {
+  margin-right: 0;
+}
+
+.program-box img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 4px;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.45);
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.overlay h2 {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.overlay h3 {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.overlay p {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 4px;
+}
+
+.reserve-btn {
+  margin-top: 20px;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.reserve-btn a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.reserve-btn span {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 2px;
+}
+
+.reserve-btn span::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  width: 0;
+  background-color: #fff;
+  transition: width 0.3s ease;
+}
+
+.program-box:hover .reserve-btn a {
+  color: #428EFF;
+}
+
+.program-box:hover .reserve-btn span::after {
+  width: 100%;
+  background-color: #428EFF;
+}
+
+/* ===== Story Section ===== */
+.story-section {
+  width: 1240px;
+  margin: 100px auto;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+.story-box {
+  position: relative;
+}
+
+.story-img {
+  width: 100%;
+  display: block;
+}
+
+.story-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 60px 80px;
+  display: table;
+  box-sizing: border-box;
+}
+
+.story-title,
+.story-txt {
+  display: table-cell;
+  vertical-align: middle;
+  color: #fff;
+}
+
+.story-title {
+  width: 50%;
+}
+
+.story-title h2 {
+  font-size: 42px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.story-title h3 {
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+
+.story-btn a {
+  font-size: 16px;
+  color: #fff;
+  font-weight: bold;
+  text-decoration: none;
+  position: relative;
+}
+
+.story-btn span {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 2px;
+}
+
+.story-btn span::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  width: 0;
+  background-color: #fff;
+  transition: width 0.3s ease;
+}
+
+.story-box:hover .story-btn a {
+  color: #428EFF;
+}
+
+.story-box:hover .story-btn span::after {
+  width: 100%;
+  background-color: #428EFF;
+}
+
+.story-txt {
+  width: 50%;
+  text-align: right;
+}
+
+.story-txt p {
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+
+/* //////visit//////////////////// */
+
+
+.visit-section {
+  width: 1240px;
+  margin: 100px auto;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+.visit-title {
+  font-size: 42px;
+  font-weight: bold;
+  margin-bottom: 5px;
+  
+}
+.visit-title a {
+  color: #404040;
+  text-decoration: none;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 4px;
+  transition: color 0.3s ease; /* 부드러운 전환 추가 */
+}
+
+.visit-title a span::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background-color: #428EFF;
+  transition: width 0.3s ease;
+}
+
+.visit-title a:hover span::after {
+  width: 100%;
+}
+
+.visit-title a:hover {
+  color: #428EFF;
+}
+
+.visit-sub {
+  font-size: 18px;
+  margin-bottom: 30px;
+  color: #404040;
+}
+
+.visit-boxes {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  
+}
+
+.visit-box {
+  position: relative;
+  width: 295px;
+  height: 480px;
+  overflow: hidden;
+  cursor: pointer;
+ 
+}
+.visit-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.visit-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #fff;
+  width: 100%;
+  height: 100%;
+  padding: 120px 20px;
+  background: rgba(0, 0, 0, 0.4);
+  transition: background 0.3s;
+}
+.visit-box:hover .visit-overlay {
+  background: rgba(66, 142, 255, 0.6);
+}
+
+.visit-title-top {
+  font-size: 28px;
+  font-weight: bold;
+  text-align: left;
+  margin-bottom: 10px;
+  
+}
+
+.visit-info {
+  font-size: 16px;
+  line-height: 1.8;
+  text-align: left;
+}
+
+
+.visit-time {
+  font-size: 20px;
+  margin-bottom: 10px;
+  
+}
+
+.visit-line {
+  margin-bottom: 20px;
+}
+
+
+
+/* ============ Footer ============ */
+.site-footer {
+  background-color: #428EFF;
+  color: #fff;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+.footer-wrap {
+  width: 1240px;
+  margin: 0 auto;
+  padding: 30px 0 30px;
+  overflow: hidden;
+  position: relative;
+}
+
+.footer-left {
+  float: left;
+  width: 1100px;
+  position: relative;
+}
+
+.footer-logo {
+  display: block;
+  width: 300px;
+  margin-bottom: 10px;
+}
+
+.footer-info {
+  margin-top: 10px;
+}
+
+.footer-info li {
+  font-size: 16px;
+  line-height: 1.8;
+  margin-bottom: 4px;
+}
+
+.footer-right {
+  float: right;
+  position: relative;
+}
+
+.footer-wa {
+  width: 100px;
+  margin-top: 200px;
+}
+
+.footer-bottom {
+  background-color: #404040;
+  text-align: center;
+  font-size: 20px;
+  padding: 25px 0;
+  color: #fff;
+}
+
+
+
+
+
+
