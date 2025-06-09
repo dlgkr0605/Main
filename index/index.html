@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,181 +9,225 @@
   <script src="script/jquery-1.12.4.min.js"></script>
   <script src="script/index.js"></script>
 </head>
+
 <body>
-  <header>
-    <div class="header-wrap">
-      <div class="logo">
-        <a href="#"><img src="img/logo/MMCA.png" alt="logo"></a>
-      </div>
-      <ul class="menu">
-        <li><a href="#">전시</a></li>
-        <li><a href="#">참여마당</a></li>
-        <li><a href="#">스토리</a></li>
-        <li><a href="#">관람안내</a></li>
-      </ul>
-      
-      <ul class="icons">
-        <li>
-          <a href="#"><img src="img/icon/language.png" alt="language"></a>
-          <p><a href="#">Language</a></p>
-        </li>
-        <li>
-          <a href="#"><img src="img/icon/search.png" alt="search"></a>
-          <p><a href="#">Search</a></p>
-        </li>
-      </ul>
-    </div>
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>index</title>
+    <link rel="stylesheet" href="css/index.css">
+    <script src="script/jquery-1.12.4.min.js"></script>
+    <script src="script/index.js"></script>
+  </head>
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>index</title>
+    <link rel="stylesheet" href="css/index.css">
+    <script src="script/jquery-1.12.4.min.js"></script>
+    <script src="script/index.js"></script>
+  </head>
+
+  <body>
+
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>index</title>
+      <link rel="stylesheet" href="css/index.css">
+      <script src="script/jquery-1.12.4.min.js"></script>
+      <script src="script/index.js"></script>
+    </head>
+
+    <body>
+      <header>
+        <div class="header-wrap">
+          <div class="logo">
+            <a href="#"><img src="img/logo/MMCA.png" alt="logo"></a>
+          </div>
+
+          <ul class="menu">
+            <li class="has-sub">
+              <a href="#">전시</a>
+              <ul class="submenu">
+                <li><a href="#">현재전시</a></li>
+                <li><a href="#">예정전시</a></li>
+                <li><a href="#">지난전시</a></li>
+              </ul>
+            </li>
+            <li class="has-sub">
+              <a href="#">참여마당</a>
+              <ul class="submenu">
+                <li><a href="#">교육</a></li>
+                <li><a href="#">워크샵</a></li>
+              </ul>
+            </li>
+            <li><a href="#">스토리</a></li>
+            <li class="has-sub">
+              <a href="#">관람안내</a>
+              <ul class="submenu">
+                <li><a href="#">서울</a></li>
+                <li><a href="#">과천</a></li>
+                <li><a href="#">덕수궁</a></li>
+                <li><a href="#">청주</a></li>
+              </ul>
+            </li>
+          </ul>
+
+          <ul class="icons">
+            <li>
+              <a href="#"><img src="img/icon/language.png" alt="language"></a>
+              <p><a href="#">Language</a></p>
+            </li>
+            <li>
+              <a href="#"><img src="img/icon/search.png" alt="search"></a>
+              <p><a href="#">Search</a></p>
+            </li>
+          </ul>
+        </div>
+      </header>
+    </body>
+
+</html>
+
+<!-- slider ///////////////////////////////////////////////////////////////////////// -->
 
 <section class="main-slider">
   <div class="slides">
-
     <div class="slide active" data-index="0">
       <img src="img/메인배너/banner01__.jpg" alt="슬라이드1" />
-      <div class="slide-inner">
-        <div class="slide-text">
-          <!-- <h2>젊은 모색 2025: 지금, 여기</h2>
-          <p><strong>과천</strong> 2025.04.24 ~ 2025.10.12</p> -->
-        </div>
-      </div>
       <div class="slide-num">01</div>
     </div>
-
     <div class="slide" data-index="1">
       <img src="img/메인배너/banner02__.jpg" alt="슬라이드2" />
-      <div class="slide-inner">
-        <div class="slide-text">
-        <!--   <h2>론 뮤익</h2>
-          <p><strong>서울</strong> 2025.04.11 ~ 2025.07.13</p> -->
-        </div>
-      </div>
       <div class="slide-num">02</div>
     </div>
-
     <div class="slide" data-index="2">
       <img src="img/메인배너/banner03__.jpg" alt="슬라이드3" />
-      <div class="slide-inner">
-        <div class="slide-text">
-       <!--    <h2>MMCA 소장품 기획전 - 수채(水彩): 물을 그리다</h2>
-          <p><strong>청주</strong> 2025.03.21 ~ 2025.09.07</p> -->
-        </div>
-      </div>
       <div class="slide-num">03</div>
     </div>
+  </div>
 
+
+  <div class="pager">
+    <span class="pager-dot active" data-index="0"></span>
+    <span class="pager-dot" data-index="1"></span>
+    <span class="pager-dot" data-index="2"></span>
+  </div>
+</section>
+
+<!-- exhibition///////////////////////////////////////////////////////////////// -->
+
+
+<section class="exhibition">
+  <h2><a href="#">EXHIBITION</a></h2>
+
+  <div class="exhibition-controls">
+    <div class="exhibition-tabs">
+      <span class="active">현재 전시</span>
+      <span>예정 전시</span>
+      <span>지난 전시</span>
+    </div>
+    <div class="exhibition-regions">
+      <span class="active">전체</span>
+      <span>서울</span>
+      <span>과천</span>
+      <span>덕수궁</span>
+      <span>청주</span>
+    </div>
+  </div>
+
+  <div class="exhibition-list">
+    <div class="exhibition-card">
+      <a href="#"><img src="img/전시 포스터/Here_and_Now.png" alt="젊은 모색 2025"></a>
+      <div class="exhibition-info">
+        <span class="location">과천</span>
+        <h3 class="title"><a href="#">젊은 모색 2025 : 지금, 여기</a></h3>
+        <p class="date">2025.04.24 ~ 2025.10.12</p>
+      </div>
+    </div>
+
+    <div class="exhibition-card">
+      <a href="#"><img src="img/전시 포스터/ronmueck.png" alt="론 뮤뮤익"></a>
+      <div class="exhibition-info">
+        <span class="location">서울</span>
+        <h3 class="title"><a href="#">론 뮤익</a></h3>
+        <p class="date">2025.04.04 ~ 2025.07.13</p>
+      </div>
+    </div>
+
+    <div class="exhibition-card">
+      <a href="#"><img src="img/전시 포스터/Five_Transformative.png" alt="다섯 가지 대화"></a>
+      <div class="exhibition-info">
+        <span class="location">서울</span>
+        <h3 class="title"><a href="#">열린공간7<br>«우리를 바꾸는 다섯 가지 대화»</a></h3>
+        <p class="date">2025.04.04 ~ 2025.07.13</p>
+      </div>
+    </div>
+
+    <div class="exhibition-card">
+      <a href="#"><img src="img/전시 포스터/MMCA Collection.png" alt="상설전"></a>
+      <div class="exhibition-info">
+        <span class="location">서울</span>
+        <h3 class="title"><a href="#">MMCA 서울 상설전<br>«한국현대미술 하이라이트»</a></h3>
+        <p class="date">2025.05.01 ~ 2026.05.03</p>
+      </div>
+    </div>
   </div>
 </section>
 
 
+<section class="program-section">
+  <div class="program-box">
+    <a href="#">
+      <img src="img/교육/education.jpg" alt="교육 프로그램 이미지">
+    </a>
+    <div class="overlay">
+      <h2>EDUCATION</h2>
+      <h3>특별 교육 ↗</h3>
+      <p>유아부터 성인까지 다양한 참여자가 현대미술을 경험하고 사회와</p>
+      <p>소통할 수 있도록 모두를 위한 열린 교육 프로그램을 진행합니다.</p>
+      <p class="reserve-btn"><a href="#"><span>예약하기</span></a></p>
 
+    </div>
+  </div>
 
+  <div class="program-box">
+    <a href="#">
+      <img src="img/워크숍/Lee Kun-yong.jpg" alt="워크숍 이미지">
+    </a>
+    <div class="overlay">
+      <h2>WORK SHOP</h2>
+      <h3>워크숍 ↗</h3>
+      <p>참여자가 현대미술을 직접 체험하고, 작가와 함께 예술의 의미를 탐색하며</p>
+      <p>창의성을 확장할 수 있도록 구성된 프로그램입니다.</p>
+      <p class="reserve-btn"><a href="#"><span>예약하기</span></a></p>
+    </div>
+  </div>
+</section>
 
-  <section class="exhibition">
-    <h2><a href="#">EXHIBITION</a></h2>
-  
-    <div class="exhibition-controls">
-      <div class="exhibition-tabs">
-        <span class="active">현재 전시</span>
-        <span>예정 전시</span>
-        <span>지난 전시</span>
+<section class="story-section">
+  <div class="story-box">
+    <img src="img/스토리/story_banner.png" alt="스토리 배너" class="story-img">
+    <div class="story-overlay">
+      <div class="story-title">
+        <h2>STORY</h2>
+        <h3>스토리 ↗</h3>
+        <div class="story-btn">
+          <a href="#"><span>자세히 보기</span></a>
+        </div>
       </div>
-      <div class="exhibition-regions">
-        <span class="active">전체</span>
-        <span>서울</span>
-        <span>과천</span>
-        <span>덕수궁</span>
-        <span>청주</span>
+      <div class="story-txt">
+        <p>국립현대미술관은 작품이 만들어지기 까지의 배경과 작가의 의도를 소개하여,</p>
+        <p>관람자가 단순한 감상을 넘어 예술과 깊이 있게 연결될 수 있도록 합니다.</p>
       </div>
     </div>
-  
-    <div class="exhibition-list">
-      <div class="exhibition-card">
-        <a href="#"><img src="img/전시 포스터/Here_and_Now.png" alt="젊은 모색 2025"></a>
-        <div class="exhibition-info">
-          <span class="location">과천</span>
-          <h3 class="title"><a href="#">젊은 모색 2025 : 지금, 여기</a></h3>
-          <p class="date">2025.04.24 ~ 2025.10.12</p>
-        </div>
-      </div>
-  
-      <div class="exhibition-card">
-        <a href="#"><img src="img/전시 포스터/ronmueck.png" alt="론 뮤뮤익"></a>
-        <div class="exhibition-info">
-          <span class="location">서울</span>
-          <h3 class="title"><a href="#">론 뮤익</a></h3>
-          <p class="date">2025.04.04 ~ 2025.07.13</p>
-        </div>
-      </div>
-  
-      <div class="exhibition-card">
-        <a href="#"><img src="img/전시 포스터/Five_Transformative.png" alt="다섯 가지 대화"></a>
-        <div class="exhibition-info">
-          <span class="location">서울</span>
-          <h3 class="title"><a href="#">열린공간7<br>«우리를 바꾸는 다섯 가지 대화»</a></h3>
-          <p class="date">2025.04.04 ~ 2025.07.13</p>
-        </div>
-      </div>
-  
-      <div class="exhibition-card">
-        <a href="#"><img src="img/전시 포스터/MMCA Collection.png" alt="상설전"></a>
-        <div class="exhibition-info">
-          <span class="location">서울</span>
-          <h3 class="title"><a href="#">MMCA 서울 상설전<br>«한국현대미술 하이라이트»</a></h3>
-          <p class="date">2025.05.01 ~ 2026.05.03</p>
-        </div>
-      </div>
-    </div>
-  </section>
+  </div>
+</section>
 
-
-  <section class="program-section">
-    <div class="program-box">
-      <a href="#">
-        <img src="img/교육/education.jpg" alt="교육 프로그램 이미지">
-      </a>
-      <div class="overlay">
-        <h2>EDUCATION</h2>
-        <h3>특별 교육 ↗</h3>
-        <p>유아부터 성인까지 다양한 참여자가 현대미술을 경험하고 사회와</p>
-        <p>소통할 수 있도록 모두를 위한 열린 교육 프로그램을 진행합니다.</p>
-        <p class="reserve-btn"><a href="#"><span>예약하기</span></a></p>
-
-      </div>
-    </div>
-  
-    <div class="program-box">
-      <a href="#">
-        <img src="img/워크숍/Lee Kun-yong.jpg" alt="워크숍 이미지">
-      </a>
-      <div class="overlay">
-        <h2>WORK SHOP</h2>
-        <h3>워크숍 ↗</h3>
-        <p>참여자가 현대미술을 직접 체험하고, 작가와 함께 예술의 의미를 탐색하며</p>
-        <p>창의성을 확장할 수 있도록 구성된 프로그램입니다.</p>
-        <p class="reserve-btn"><a href="#"><span>예약하기</span></a></p>
-      </div>
-    </div>
-  </section>
-  
-  <section class="story-section">
-    <div class="story-box">
-      <img src="img/스토리/story_banner.png" alt="스토리 배너" class="story-img">
-      <div class="story-overlay">
-        <div class="story-title">
-          <h2>STORY</h2>
-          <h3>스토리 ↗</h3>
-          <div class="story-btn">
-            <a href="#"><span>자세히 보기</span></a>
-          </div>
-        </div>
-        <div class="story-txt">
-          <p>국립현대미술관은 작품이 만들어지기까지의 배경과 작가의 의도를 소개하여,</p>
-          <p>관람자가 단순한 감상을 넘어 예술과 깊이 있게 연결될 수 있도록 합니다.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-  
-
+<!-- visit/////////////////////////////////////////////////////////// -->
 
 <section class="visit-section">
   <h2 class="visit-title"><a href="#"><span>VISIT</span></a></h2>
@@ -257,7 +302,7 @@
             <p class="visit-line">화, 수, 목, 금, 토, 일요일<br>10:00~18:00</p>
             <p class="visit-line">수, 토요일<br>10:00~21:00</p>
           </div>
-          <div class="visit-note-group">           
+          <div class="visit-note-group">
             <p class="visit-note">※ 휴관일: 1월1일, 매주 월요일</p>
             <p class="visit-note">※ 청주관 정문 17시 입장 마감</p>
           </div>
@@ -265,14 +310,22 @@
       </div>
     </div>
 
+  </div> <!-- .visit-boxes -->
+
+  <!-- 공지사항 -->
+  <div class="visit-notice">
+    <p>• 국립현대미술관 &lt;2025 박물관·미술관 주간&gt; 무료 관람 실시 안내</p>
+    <p>• 국립현대미술관 어린이날, 석가탄신일 대체공휴일 정상개관(5.5 ~ 5.6.) 및 대체휴관(5.7.) 안내</p>
   </div>
 </section>
 
+</section>
 
-  
+<!-- footer//////////////////////////////////////////////////// -->
+
 <footer class="site-footer">
   <div class="footer-wrap">
-    <div class="footer-left">
+    <div class="footer-txt">
       <a href="#"><img src="img/logo/MMCA.png" alt="국립현대미술관 로고" class="footer-logo"></a>
       <ul class="footer-info">
         <li>대표자: 김성희, 사업자등록번호: 138-83-00313</li>
@@ -281,8 +334,8 @@
         <li>ⓒ 2021 National Museum of Modern and Contemporary Art, Korea</li>
       </ul>
     </div>
-    <div class="footer-right">
-      <img src="img/icon/mark.png" alt="웹접근성 품질마크" class="footer-wa">
+    <div class="footer-mark">
+      <img src="img/icon/mark.png" alt="웹접근성 품질마크" class="footer-quality">
     </div>
   </div>
   <div class="footer-bottom">
@@ -291,4 +344,5 @@
 </footer>
 
 </body>
+
 </html>
