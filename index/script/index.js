@@ -8,10 +8,7 @@ $(document).ready(function () {
   });
 });
 
-
 ///////////////////pager/////////////////
-
-
 $(document).ready(function () {
   // 페이저 클릭 시
   $(".pager-dot").click(function () {
