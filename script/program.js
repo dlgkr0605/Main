@@ -21,9 +21,15 @@ $(function () {
 
     function bindThumbClick() {
       $thumbsContainer.find('.thumb').off('click').on('click', function () {
-        const temp = $main.attr('src');
-        $main.attr('src', $(this).attr('src'));
-        $(this).attr('src', temp);
+        const newSrc = $(this).attr('src');
+        const oldSrc = $main.attr('src');
+        const $thumb = $(this);
+
+        // 부드럽게 교체
+        $main.fadeOut(300, function () {
+          $main.attr('src', newSrc).fadeIn(300);
+          $thumb.attr('src', oldSrc); // 썸네일과 교체
+        });
       });
     }
 
@@ -35,19 +41,21 @@ $(function () {
       const $firstThumb = $thumbsContainer.find('.thumb').first();
       const nextSrc = $firstThumb.attr('src');
 
-      // 메인과 첫 썸네일 교체
-      $main.attr('src', nextSrc);
-      $firstThumb.remove();
+      // 부드럽게 대표 이미지 변경
+      $main.fadeOut(300, function () {
+        $main.attr('src', nextSrc).fadeIn(300);
+      });
 
-      // 썸네일 다시 추가 (맨 뒤로 보내기)
+      // 썸네일 롤링
+      $firstThumb.remove();
       $thumbsContainer.append(`<img src="${currentSrc}" alt="" class="thumb">`);
 
-      // 다시 이벤트 바인딩
+      // 새로 추가된 썸네일 이벤트 다시 바인딩
       bindThumbClick();
     });
   }
 
-  // 각각 슬라이드 적용
+  // 각각 슬라이드에 적용
   setupSlide('#main-edu', '.edu-thumbs', '.edu-next');
   setupSlide('#main-work', '.work-thumbs', '.work-next');
 });
